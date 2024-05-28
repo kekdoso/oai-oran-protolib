@@ -54,7 +54,10 @@ message ue_info_m{
     optional float meas_type_1=2;
     optional float meas_type_2=3;
     optional float meas_type_3=4;
-
+    optional float meas_type_4=7;
+    optional float meas_type_5=8;
+    optional float meas_type_6=9;
+    
     // specific ue's propoerties (these will be set by the xapp and sent to gnb)
     optional bool prop_1 = 5;
     optional float prop_2 = 6;
