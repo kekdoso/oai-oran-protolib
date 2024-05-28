@@ -590,7 +590,7 @@ const ProtobufCMessageDescriptor ran_message__descriptor =
   (ProtobufCMessageInit) ran_message__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[6] =
+static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[9] =
 {
   {
     "rnti",
@@ -664,11 +664,50 @@ static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[6] =
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
+  {
+    "meas_type_4",
+    7,
+    PROTOBUF_C_LABEL_OPTIONAL,
+    PROTOBUF_C_TYPE_FLOAT,
+    offsetof(UeInfoM, has_meas_type_4),
+    offsetof(UeInfoM, meas_type_4),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
+  {
+    "meas_type_5",
+    8,
+    PROTOBUF_C_LABEL_OPTIONAL,
+    PROTOBUF_C_TYPE_FLOAT,
+    offsetof(UeInfoM, has_meas_type_5),
+    offsetof(UeInfoM, meas_type_5),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
+  {
+    "meas_type_6",
+    9,
+    PROTOBUF_C_LABEL_OPTIONAL,
+    PROTOBUF_C_TYPE_FLOAT,
+    offsetof(UeInfoM, has_meas_type_6),
+    offsetof(UeInfoM, meas_type_6),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
 };
 static const unsigned ue_info_m__field_indices_by_name[] = {
   1,   /* field[1] = meas_type_1 */
   2,   /* field[2] = meas_type_2 */
   3,   /* field[3] = meas_type_3 */
+  6,   /* field[6] = meas_type_4 */
+  7,   /* field[7] = meas_type_5 */
+  8,   /* field[8] = meas_type_6 */
   4,   /* field[4] = prop_1 */
   5,   /* field[5] = prop_2 */
   0,   /* field[0] = rnti */
@@ -676,7 +715,7 @@ static const unsigned ue_info_m__field_indices_by_name[] = {
 static const ProtobufCIntRange ue_info_m__number_ranges[1 + 1] =
 {
   { 1, 0 },
-  { 0, 6 }
+  { 0, 9 }
 };
 const ProtobufCMessageDescriptor ue_info_m__descriptor =
 {
@@ -686,7 +725,7 @@ const ProtobufCMessageDescriptor ue_info_m__descriptor =
   "UeInfoM",
   "",
   sizeof(UeInfoM),
-  6,
+  9,
   ue_info_m__field_descriptors,
   ue_info_m__field_indices_by_name,
   1,  ue_info_m__number_ranges,

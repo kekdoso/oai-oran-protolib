@@ -141,6 +141,12 @@ struct  _UeInfoM
   float meas_type_2;
   protobuf_c_boolean has_meas_type_3;
   float meas_type_3;
+  protobuf_c_boolean has_meas_type_4;
+  float meas_type_4;
+  protobuf_c_boolean has_meas_type_5;
+  float meas_type_5;
+  protobuf_c_boolean has_meas_type_6;
+  float meas_type_6;
   /*
    * specific ue's propoerties (these will be set by the xapp and sent to gnb)
    */
@@ -151,7 +157,7 @@ struct  _UeInfoM
 };
 #define UE_INFO_M__INIT \
  { PROTOBUF_C_MESSAGE_INIT (&ue_info_m__descriptor) \
-    , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+    , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
 
 
 struct  _UeListM
