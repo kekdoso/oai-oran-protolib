@@ -10,6 +10,7 @@ enum RAN_message_type{
 enum RAN_parameter{
     GNB_ID = 1;
     UE_LIST = 3;
+    GNB_PRB = 5;
 }
 
 message RAN_param_map_entry{
@@ -51,12 +52,11 @@ message ue_info_m{
     required int32 rnti=1;
 
     // specific ue's measurements (these will come from the gnb)
-    optional float meas_type_1=2;
-    optional float meas_type_2=3;
-    optional float meas_type_3=4;
-    optional float meas_type_4=7;
-    optional float meas_type_5=8;
-    optional float meas_type_6=9;
+    optional float meas_rsrp=2;
+    optional float meas_ber_up=3;
+    optional float meas_ber_down=4;
+    optional int64 meas_mcs_up=7;
+    optional int64 meas_mcs_down=8;
     
     // specific ue's propoerties (these will be set by the xapp and sent to gnb)
     optional bool prop_1 = 5;

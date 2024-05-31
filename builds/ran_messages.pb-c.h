@@ -35,7 +35,8 @@ typedef enum _RANMessageType {
 } RANMessageType;
 typedef enum _RANParameter {
   RAN_PARAMETER__GNB_ID = 1,
-  RAN_PARAMETER__UE_LIST = 3
+  RAN_PARAMETER__UE_LIST = 3,
+  RAN_PARAMETER__GNB_PRB = 5
     PROTOBUF_C__FORCE_ENUM_TO_BE_INT_SIZE(RAN_PARAMETER)
 } RANParameter;
 
@@ -135,18 +136,16 @@ struct  _UeInfoM
   /*
    * specific ue's measurements (these will come from the gnb)
    */
-  protobuf_c_boolean has_meas_type_1;
-  float meas_type_1;
-  protobuf_c_boolean has_meas_type_2;
-  float meas_type_2;
-  protobuf_c_boolean has_meas_type_3;
-  float meas_type_3;
-  protobuf_c_boolean has_meas_type_4;
-  float meas_type_4;
-  protobuf_c_boolean has_meas_type_5;
-  float meas_type_5;
-  protobuf_c_boolean has_meas_type_6;
-  float meas_type_6;
+  protobuf_c_boolean has_meas_rsrp;
+  float meas_rsrp;
+  protobuf_c_boolean has_meas_ber_up;
+  float meas_ber_up;
+  protobuf_c_boolean has_meas_ber_down;
+  float meas_ber_down;
+  protobuf_c_boolean has_meas_mcs_up;
+  int64_t meas_mcs_up;
+  protobuf_c_boolean has_meas_mcs_down;
+  int64_t meas_mcs_down;
   /*
    * specific ue's propoerties (these will be set by the xapp and sent to gnb)
    */
@@ -157,7 +156,7 @@ struct  _UeInfoM
 };
 #define UE_INFO_M__INIT \
  { PROTOBUF_C_MESSAGE_INIT (&ue_info_m__descriptor) \
-    , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+    , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
 
 
 struct  _UeListM
